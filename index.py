@@ -27,19 +27,7 @@ import json
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
 
-firebase_creds ={
-  "type": "service_account",
-  "project_id": "ai-render-38beb",
-  "private_key_id": "34ba8eb17424d076eef7b3ef7356fe46791ed32f",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDA1kt839GoTLwQ\n3tjEOIBD75h8TQfTwnBv6jnKH1a2oUjb2D8UU4Zesbmq4HHSxkjhuty/sjnrEJ+q\noDwaRJIJXTg8kKgJ9uhhQEKi2r6HU8lm9+gcItomkGK0bDKpEg4z8Jr1m+FpMDCq\nLkhgwtEedQQn5c6yz0E8AjOF2J5WQ29elw08GkgDL9SrtZZMPy5h8apuiDhFX8sn\nVWrSOy8O6k8E0U8z/6oYZS/zVqH+1svQPc5bxeLrN92JhEi0sdRUPMgdvUul2RHE\nPp1X9/6/5FmW8DeJZ4rcHk+5Rqnlez1UTp6m+qLsmMOjJKNbGzX1B2IymVEtUVdC\nr9OC1O83AgMBAAECggEAAj3bex73nHRmkURN58YHs60i1tBnFrlBaQOjhVZ6Qb2R\nOmutRrVhL/5H5r/HgvLmy6efmPjflHxz0V4dz2kG+5CNA/iN2NkjwrxQ/1H5+gUU\nJ8bE+M1s6hrZPY4DxBRffDoVSw/zUwTfjp2Nc4Eq63w3vqZSEfZieenv+GPYFK+c\ndmONEHlFZFBTi1+Ks6w4nSlMrgpqEOIZ5j6EN+ujTVKhLg5rTG/quAuh7KufuoZC\n6+CjbjnwrFlFp8OcbR0N18oawa5QHuhQtmOoQ/CmhIm3IETUzDgCQL4Hv3Yhteb6\n5gYc95iOJ1obpPrDeBySdgiow+62pBcqCwmRuuqO6QKBgQD44DeiBeLX7EtAT3/G\nASywvPZOqPU3k7ZufJhEII+8a/ZYtxhJrNOTiUFt+zwa3+6PCn5h0y04mg1UMGWB\n12g9fmFc7z15Ava1WIHi1IriKXDt5pX2/p9JQcGFrYQIVBWu7QH9Q5kYmrA7nq/B\n5b9Ao9SX81Z/eKs5YpYWlFhZzwKBgQDGW2vBc5j8+FpLUXv2h1wY7jW2nCea1Rzc\noojMfaITfzBHZIojUKmnyx1+xegZ3FH+Vf9HR4/LUbBGk+RpUPHmTauEysleS5fy\nHDKRURsUAvd7YCrZa22mN05X2qDNWkeMYtCjRzPslZY0bZv9VcIkt9DK1RUJxtws\nQcq8mbW2GQKBgQD0KcVqx6uNet048sXAVFar7jcXZNtu8xP/wW0BKZDaonDFCJxj\na5MHI5l1dQ26sAczfnAPOUccSMba2cA8akByVBLhQjVlC2tO7s4+45Z923pXa+mk\nsJlFHaXmqBzortW3D/7roe4JHXnYhA6ag/PmTtS7Xph15sTVP8tPy6oCMQKBgQCs\nHoAuaUSDnm2blaVfkq1T5MAvKOkk7XAR8+eIqiuNh3w5NwC3DDNrKlD5xHlWl1t+\nuti83VflMYkodQRqbpa5JQSEQgLiE+5RZC5s8lfw0XI2WIhWCWYoKS2OBmQqTQBw\nzP4F8K8Zx+OCsun8tgG1ItvGZYfP6AL9VEm7xhVrYQKBgQDN28mQI9PvoDf03jx1\nq1LAbEPTNsn0lZTfTcJBS758oFaixUJjX5Hg1bAHfWo3dC8/ra9vbRD239GHtuu6\nEpcc2y3+eNAiGxnkl8TVidoaZZ6qx6edT/34yuy6IzMHI66U/1td4X+mCgd8BTi1\n+2B+qpVpyIaEGWFUUCAZkfETZA==\n-----END PRIVATE KEY-----\n",
-  "client_email": "firebase-adminsdk-fbsvc@ai-render-38beb.iam.gserviceaccount.com",
-  "client_id": "114644966291203884168",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40ai-render-38beb.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
-}
+firebase_creds_json = os.getenv("FIREBASE_CREDS")
 
 
 # Initialize 
