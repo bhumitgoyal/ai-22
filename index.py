@@ -27,7 +27,7 @@ import json
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
 
-firebase_creds_json = os.getenv("FIREBASE_CREDS")
+firebase_creds = os.getenv("FIREBASE_CREDS")
 
 
 # Initialize 
