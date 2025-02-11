@@ -29,10 +29,17 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 
 firebase_creds = os.getenv("FIREBASE_CREDS")
 
+if firebase_creds:
+    # Convert JSON string to a dictionary
+    firebase_creds_dict = json.loads(firebase_creds)
 
-# Initialize 
-cred = credentials.Certificate(firebase_creds)
-firebase_admin.initialize_app(cred)
+    # Use credentials.Certificate() with the dictionary
+    cred = credentials.Certificate(firebase_creds_dict)
+    firebase_admin.initialize_app(cred)
+else:
+    raise ValueError("FIREBASE_CREDS environment variable not set")
+
+
 
 # Initialize Firestore
 
